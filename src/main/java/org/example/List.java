@@ -27,6 +27,27 @@ public class List implements Iterable {
         }
         return false;
     }
+    public void remove(Object value){
+        Node prev=null;
+        Node current=this.head;
+        System.out.println("\n\n---Remove---");
+        if (contain(value))
+        while (true){
+            if (current.value.equals(value)){
+                if (prev==null){
+                    current=current.next;
+                    head=current;
+                    break;
+                }else {
+                    prev.next=current.next;
+                    current=current.next;
+                    break;
+                }
+            }
+            prev=current;
+            current=current.next;
+        }
+    }
 
     @Override
     public String toString() {

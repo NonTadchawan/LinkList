@@ -7,9 +7,14 @@ public class Main {
         myList.add("B");
         myList.add("C");
         myList.add("D");
-        System.out.println(myList);
         System.out.println("Contain in myList: " + myList.contain("D"));
         System.out.println("Contain in myList: " + myList.contain("F"));
+        System.out.print("\nItem in myList: ");
+        for (Object item : myList) {
+            System.out.print(item + " ");
+        }
+
+        myList.remove("C");
         System.out.print("Item in myList: ");
         for (Object item : myList) {
             System.out.print(item + " ");
